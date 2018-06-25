@@ -1,0 +1,74 @@
+ <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>QA</title>
+      <link rel="stylesheet" href="css/cssReset.css">  
+      <link rel="stylesheet" href="css/qa.css">
+      <link rel="stylesheet" href="css/all.css">
+    
+    
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script>
+        $( document ).ready(function() {
+            $(".list p").hide();
+            $('.list h2').click(function(event){
+                $('.list p').slideUp();
+                $(this).parent().find('p').slideToggle();
+            });
+        });
+        </script>
+    
+      
+    </head>
+    
+    <body>
+    
+      <body background="image/bg.png">
+        <div class="header">
+            <div class="top" id="top">
+                <ul>
+                <li><input type ="image" src="image/logo.png" onclick="javascript:location.href='index.html'" id="logo" ></input></li>
+                    <div class="menu">        
+                    <li><input type ="image" src="image/寵物總覽.png" onclick="javascript:location.href='viewall.html'" id="menulogo" ></input></li>
+                    <li><input type ="image" src="image/我的收藏.png" onclick="javascript:location.href='collection.html'" id="menulogo" ></input></li>
+                    <li><input type ="image" src="image/QA.png" onclick="javascript:location.href='QA.html'" id="menulogo" ></input></li>
+                    <li><input type ="image" src="image/聯絡我們.png" onclick="javascript:location.href='contact.html'" id="menulogo" ></input></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+         
+            <div class="qamain">
+                <div class="qa">
+                <h1>常見問題</h1>
+                <ul class="list">
+                <li>
+                    <h2>Q：如何認養毛小孩呢？</h2>
+                    <p id="a">本網站為整合收容所訊息，若有想領養毛小孩的朋友請聯繫網站附上的收容所資訊。</p>
+                </li>
+                <li>
+                    <h2>Q：如何成為好的主人呢？</h2>
+                    <p>給他優良居住環境還有愛他Forever。</p>
+                </li>
+                    <li>
+                    <h2>Q：如何無法再照顧毛小孩怎麼辦?</h2>
+                    <p>若發生無法再繼續照顧毛小孩的情形，請務必為毛小孩尋找好新的領養人，若真的找不到合適領養人可先歸還送養人或是歸還當初領養的動保團體/協會。無論如何請勿把貓狗遺棄或丟棄讓他們自生自滅。</p>    
+                    </li>
+                    <li>
+                    <h2>Q：遇到被棄養的毛小孩怎麼辦?</h2>
+                    <p>牠可能走失或是遭到棄養，可以先將牠安置在家裡，隨後帶至醫院掃晶片或是用貼海報尋找主人，若都沒找到新主人可以送至當地動物保護協會。</p>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        
+      </body>
+      <div class="logototop">
+          <a href="#top"><img src="image/top.png" alt=""></a>
+      </div>
+      <div class="back">
+            <input type="image" src="image/back.png" onclick="history.back()" width="200px" ></input>
+            </div>
+    </body>
+    </html>

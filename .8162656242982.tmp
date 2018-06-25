@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet type="text/css" href="css/cssReset.css">
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.customselect.js"></script>
+    <title>聯絡我們</title>
+
+</head>
+
+
+
+<body background="image/bg.png">
+    <div class="header">
+            <div class="top" id="top">
+            <ul>
+            <li><input type ="image" src="image/logo.png" onclick="javascript:location.href='index.html'" id="logo" ></input></li>
+                <div class="menu">        
+                <li><input type ="image" src="image/寵物總覽.png" onclick="javascript:location.href='viewall.html'" id="menulogo" ></input></li>
+                <li><input type ="image" src="image/我的收藏.png" onclick="javascript:location.href='collection.html'" id="menulogo" ></input></li>
+                <li><input type ="image" src="image/QA.png" onclick="javascript:location.href='QA.html'" id="menulogo" ></input></li>
+                <li><input type ="image" src="image/聯絡我們.png" onclick="javascript:location.href='contact.html'" id="menulogo" ></input></li>
+                </div>
+            </ul></div></div>
+	
+		<div class="main">
+            <div class="con">
+                <h1>聯絡我們</h1>
+                <p>想進一步瞭解<span id="webname">毛起來找</span>或是<span id="webname">對毛起來找</span>有任何寶貴意見，都歡迎您與我們聯繫，我們將竭誠為您服務！</p>
+                <br/>
+            
+           
+                <form action="con-result.php" method="post">
+                    您的姓名：<input type="text" name="name"><br/>
+                    您的性別：<input type="radio" value="male" name="gender">男
+                    <input type="radio" value="female" name="gender">女<br/>
+                    您的信箱：<input type="text" name="email"><br/>
+                    寶貴建議： <textarea rows="10" cols="50" name="message"></textarea><br/> 	<!--四行 一行50字 -->
+                    <input type="image" src="image/提交.png" id="send" onClick="document.formname.submit();">
+                    <input type="image" img src="image/重設.png" id="send" onClick="document.formname.reset();">
+                </form>
+                <!-- <input type="image" src="image/尋找.png" class="find" value="" onclick="processFormData();"> -->
+            </div>
+		</div>
+        <div class="logototop">
+                <a href="#top"><img src="image/top.png" alt=""></a>
+        </div>
+
+</body>
+</html>
+

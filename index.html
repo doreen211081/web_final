@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <link rel=stylesheet type="text/css" href="css/cssReset.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/jquery.kkPages.js"></script>
+    <title>毛起來找</title>
+</head>
+
+
+<body background="image/bg.png">
+    <div class="header">
+        <div class="top" id="top">
+        <ul>
+        <li><input type ="image" src="image/logo.png" onclick="javascript:location.href='index.html'" id="logo" ></input></li>
+            <div class="menu">        
+            <li><input type ="image" src="image/寵物總覽.png" onclick="javascript:location.href='viewall.html'" id="menulogo" ></input></li>
+            <li><input type ="image" src="image/我的收藏.png" onclick="javascript:location.href='collection.html'" id="menulogo" ></input></li>
+            <li><input type ="image" src="image/QA.png" onclick="javascript:location.href='QA.html'" id="menulogo" ></input></li>
+            <li><input type ="image" src="image/聯絡我們.png" onclick="javascript:location.href='contact.html'" id="menulogo" ></input></li>
+            </div>
+        </ul></div></div>
+    
+    <div class="wrap">
+        <ul class="adoptlist"></ul>
+        <div class="select">
+            <form name='searchform' id='searchform'>
+            <div class="pet_select" style="background:url(image/骨頭.png) no-repeat 0 0;">
+            <select name="pet_kind"  id="pet_select" >
+                <option disabled selected value="">種類</option> <!--預設但不是選項-->
+                <option value="貓">貓咪</option>
+                <option value="狗">狗狗</option>
+                <option value="其他">其他</option>
+            </select>
+            </div>
+            <div class="pet_select" style="background:url(image/骨頭.png) no-repeat 0 0;">
+            <select name="pet_sex" id="pet_select" >
+                <option disabled selected value="">性別</option>
+                <option value="M">公</option>
+                <option value="F">母</option>
+            </select>
+            </div>
+            <div class="pet_select" style="background:url(image/骨頭.png) no-repeat 0 0;">
+            <select name="pet_bodytype" id="pet_select" >
+                <option disabled selected value="">體型</option>
+                <option value="SMALL">小型</option>
+                <option value="MEDIUM">中型</option>
+                <option value="BIG">大型</option>
+            </select>
+            </div>
+            <div class="pet_select" style="background:url(image/骨頭.png) no-repeat 0 0;">
+            <select name="area" id="pet_select" >
+            <option disabled selected value="">地區</option>
+                <optgroup label="北部地區"> <!--選項分類-->
+                    <option value="臺北市">臺北市</option>
+                    <option value="新北市">新北市 </option>
+                    <option value="基隆市">基隆市</option>
+                    <option value="新竹市">新竹市</option>
+                    <option value="新竹縣">新竹縣</option>
+                    <option value="桃園市">桃園市</option>
+                    <option value="宜蘭縣">宜蘭縣</option>
+                </optgroup>
+                <optgroup label="中部地區">
+                    <option value="臺中市">臺中市</option>
+                    <option value="彰化縣">彰化縣</option>
+                    <option value="雲林縣">雲林縣</option>
+                    <option value="南投縣">南投縣</option>
+                    <option value="苗栗縣">苗栗縣</option>
+                </optgroup>
+                <optgroup label="南部地區">
+                    <option value="高雄市">高雄市</option>
+                    <option value="臺南市">臺南市</option>
+                    <option value="嘉義市">嘉義市</option>
+                </optgroup>
+                <optgroup label="東部地區">
+                    <option value="花蓮縣">花蓮縣</option>
+                    <option value="臺東縣">臺東縣</option>
+                </optgroup>
+                 <optgroup label="離島地區">
+                    <option value="金門縣">金門縣</option>
+                    <option value="澎湖縣">澎湖縣</option>
+                </optgroup>
+            </select>
+            </div>
+            
+            <img class="searchimg"src="image/尋找.png" width="50%" >
+            <input type="button" class="find" onclick="getCond(); newpage(); showResult();">
+        </form>
+
+        </div>
+        
+        <div class="map">
+                <img id="taiwanmap" src="image/map.png" border="0" width="654" height="808" orgWidth="654" orgHeight="808" usemap="#taiwan" alt="" />
+                <map name="taiwan" id="taiwanmap">
+                <area shape="rect" coords="652,806,654,808" alt="Image Map" style="outline:none;" title="Taiwan Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
+                <area id="基隆市" alt="基隆市" title="基隆市" href="asylum基隆市.html" shape="poly" coords="572,61,582,64,581,58,628,57,628,67,628,76,600,76,592,80,588,84,593,92,584,97,574,93,562,80,560,76,558,72" style="outline:none;" target="_self"     />
+                <area id="臺北市" alt="臺北市" title="臺北市" href="asylum臺北市.html" shape="poly" coords="544,53,554,76,560,94,552,97,552,109,529,96,528,81,501,78,500,64,522,61" style="outline:none;" target="_self"     />
+                <area id="新北市" alt="新北市" title="新北市" href="asylum新北市.html" shape="poly" coords="548,33,520,37,504,61,484,69,508,93,501,106,497,106,498,132,508,133,509,148,514,165,532,168,564,137,572,136,588,121,618,105,636,101,612,77,594,78,590,81,592,93,582,96,568,85,556,76,560,96,553,97,552,108,530,100,529,85,528,80,500,77,500,65,528,61,541,53,552,72,562,68,568,65,570,60,556,50" style="outline:none;" target="_self"     />
+                <area id="桃園市" alt="桃園市" title="桃園市" href="asylum桃園市.html" shape="poly" coords="480,73,441,88,414,112,440,120,448,126,444,133,480,150,484,162,484,173,502,185,514,172,516,170,508,152,512,136,502,133,496,109,496,102,504,104,508,93,504,84" style="outline:none;" target="_self"     />
+                <area id="新竹縣" alt="新竹縣" title="新竹縣" href="asylum新竹縣.html" shape="poly" coords="416,112,401,124,416,146,406,152,400,161,436,188,452,192,472,208,474,220,485,216,492,208,502,201,508,189,484,176,484,160,472,150,458,144,444,134,446,128,436,120" style="outline:none;" target="_self"     />
+                <area id="新竹市" alt="新竹市" title="新竹市" href="asylum新竹市.html" shape="poly" coords="402,125,396,129,360,132,360,145,388,150,398,160,409,152,416,148,418,140" style="outline:none;" target="_self"     />
+                <area id="苗栗縣" alt="苗栗縣" title="苗栗縣" href="asylum苗栗縣.html" shape="poly" coords="389,154,364,180,332,221,360,240,384,238,398,242,408,244,422,248,452,236,466,228,472,217,472,208,444,188,430,185" style="outline:none;" target="_self"     />
+                <area id="臺中市" alt="臺中市" title="臺中市" href="asylum臺中市.html" shape="poly" coords="332,224,312,248,305,269,312,273,316,285,328,293,337,301,352,310,368,308,380,296,384,288,393,293,400,286,416,284,436,274,444,273,454,266,466,277,488,285,496,281,496,268,502,254,509,236,492,228,488,218,473,220,456,238,424,252,410,246,393,244,385,236,361,241" style="outline:none;" target="_self"     />
+                <area id="彰化縣" alt="彰化縣" title="彰化縣" href="asylum彰化縣.html" shape="poly" coords="304,272,280,306,270,325,253,352,270,356,294,353,324,361,345,362,352,361,340,352,338,333,337,309,344,308" style="outline:none;" target="_self"     />
+                <area id="南投縣" alt="南投縣" title="南投縣" href="asylum南投縣.html" shape="poly" coords="344,306,336,306,340,320,338,344,348,357,344,361,337,378,337,392,357,392,365,401,380,405,382,416,402,429,418,428,432,436,444,412,454,409,458,405,472,400,472,384,472,372,466,361,478,336,480,321,480,317,492,288,464,277,456,265,446,273,438,272,429,282,404,285,392,293,384,285,372,309,364,312" style="outline:none;" target="_self"     />
+                <area id="雲林縣" alt="雲林縣" title="雲林縣" href="asylum雲林縣.html" shape="poly" coords="340,361,288,354,252,356,233,376,224,400,228,416,236,420,240,413,264,410,280,397,300,393,308,401,336,404,348,404,356,405,364,396,357,392,340,392,338,376" style="outline:none;" target="_self"     />
+                <area id="嘉義市" alt="嘉義市" title="嘉義市" href="asylum嘉義市.html" shape="poly" coords="296,409,264,412,240,413,241,428,277,430,292,422,300,420" style="outline:none;" target="_self"     />
+                <area id="臺南市" alt="臺南市" title="臺南市" href="asylum臺南市.html" shape="poly" coords="312,468,314,454,300,445,289,442,280,441,260,449,256,458,244,465,222,460,212,496,216,525,233,556,242,552,269,557,288,549,292,542,298,541,324,514,340,488,328,481,324,486" style="outline:none;" target="_self"     />
+                <area id="高雄市" alt="高雄市" title="高雄市" href="asylum高雄市.html" shape="poly" coords="422,429,402,430,341,488,336,500,308,529,300,541,296,544,288,549,276,557,244,552,237,560,258,590,260,606,265,624,278,632,280,645,288,648,300,629,301,573,312,573,340,556,364,558,380,562,381,557,393,561,392,541,394,508,404,485,417,469,436,461,424,452,424,444,428,438,432,434" style="outline:none;" target="_self"     />
+                <area id="宜蘭縣" alt="宜蘭縣" title="宜蘭縣" href="asylum宜蘭縣.html" shape="poly" coords="616,105,574,133,561,136,540,161,518,169,504,185,505,198,493,208,488,217,512,236,520,234,530,244,544,248,569,240,588,245,601,221,613,200,616,184,601,168,597,140,612,128,617,117" style="outline:none;" target="_self"     />
+                <area id="花蓮縣" alt="花蓮縣" title="花蓮縣" href="asylum花蓮縣.html" shape="poly" coords="544,248,520,237,504,244,496,273,496,284,492,288,481,316,480,329,468,360,476,369,472,393,468,401,462,404,460,408,440,417,432,436,421,445,428,454,436,461,452,474,468,485,484,498,500,486,512,444,512,433,524,428,536,437,541,424,534,414,540,398,552,345,560,317,562,304,564,289,569,269,581,260,594,256,590,250,573,241" style="outline:none;" target="_self"     />
+                <area id="臺東縣" alt="臺東縣" title="臺東縣" href="asylum臺東縣.html" shape="poly" coords="534,437,528,428,516,434,508,457,497,489,484,500,464,489,452,477,436,461,424,466,400,496,392,513,389,540,397,557,400,569,398,589,388,597,376,614,372,625,373,644,376,660,372,673,384,676,396,689,412,698,412,672,420,665,426,636,444,609,456,592,476,569,480,560,489,557,509,536,522,513,524,492,528,461,533,450" style="outline:none;" target="_self"     />
+                <area id="金門縣" alt="金門縣" title="金門縣" href="asylum金門縣.html" shape="poly" coords="49,237,45,248,30,258,40,260,56,258,64,249,72,260,130,265,130,248,93,246,72,240,58,244" style="outline:none;" target="_self"     />
+                <area id="澎湖縣" alt="澎湖縣" title="澎湖縣" href="asylum澎湖縣.html" shape="poly" coords="120,500,110,510,101,528,89,528,90,541,81,553,84,598,110,589,153,589,153,576,136,570,129,545" style="outline:none;" target="_self"     />
+                <area id="連江縣" alt="連江縣" title="連江縣" href="asylumNULL.html" shape="poly" coords="72,142,49,153,37,168,32,180,44,185,52,181,70,182,112,184,110,172,69,169,58,165,68,153,76,153,80,149" style="outline:none;" target="_self"     />
+                <area id="嘉義縣" alt="嘉義縣" title="嘉義縣" href="asylumNULL.html" shape="poly" coords="265,409,284,412,296,409,301,420,293,425,286,429,273,430,244,429,236,425,226,421,224,442,224,458,238,464,252,464,264,449,276,444,301,445,312,456,312,468,322,482,329,484,340,488,356,468,372,457,393,437,400,432,380,420,382,409,368,400,356,404,340,404,313,402,304,393,292,393,273,398" style="outline:none;" target="_self"     />
+                <area id="屏東縣" alt="屏東縣" title="屏東縣" href="asylumNULL.html" shape="poly" coords="300,570,302,620,289,644,296,653,306,648,320,664,348,696,361,704,368,732,362,745,384,770,389,768,388,764,406,778,406,744,413,740,412,724,412,704,384,689,385,684,388,677,377,672,376,661,372,640,373,621,376,606,392,597,404,581,402,569,394,560,380,557,372,561,352,558,341,557,318,566,310,570" style="outline:none;" target="_self"     />
+                </map>
+            
+        </div>
+    
+    
+    
+    
+    </div>
+    <div class="logototop">
+        <a href="#top"><img src="image/top.png" alt=""></a>
+    </div>
+    
+</body>
+</html>
